@@ -3,5 +3,7 @@ $(document).ready(function () {
 });
 
 function init () {
-  // Here comes scripts
+
+  // Scripts
+
 }

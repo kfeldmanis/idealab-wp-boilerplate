@@ -20,6 +20,13 @@
 <html lang="<?php echo $website_lang; ?>">
 <head prefix="og: http://ogp.me/ns#">
 
+  <?php if ( is_404() ) { ?>
+  <title>404 - Not found</title>
+  <meta name="robots" content="noindex" />
+  <meta name="googlebot" content="noindex" />
+
+  <?php } else { ?>
+
   <title><?php echo $website_title; ?></title>
 
   <!-- General meta -->
@@ -52,6 +59,8 @@
   <meta name="twitter:creator" content="@<?php echo $website_twitter_username; ?>">
   <meta name="twitter:image:src" content="<?php echo $website_template_url; ?>/assets/images/misc/og-logo.png">
   <meta name="twitter:domain" content="<?php echo $website_url; ?>">
+
+  <?php } ?>
 
   <!-- Icons -->
   <link rel="shortcut icon" href="<?php echo $website_template_url; ?>/assets/images/misc/favicon.png" type="image/x-icon" />

@@ -1,3 +1,9 @@
+// Colors
+$dark : #333333;
+
+// Fonts
+$primary-font: "Verdana", sans-serif;
+
 @import "compass/reset";
 @import "compass/css3";
 @import "mixins";
@@ -9,6 +15,8 @@ html, body {
 
 body {
   @include fontsmooth;
+  font-family: $primary-font;
+  color: $dark;
 }
 
 .table {
