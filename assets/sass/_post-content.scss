@@ -1,0 +1,23 @@
+.post-content {
+  padding-top: 40px;
+  @include borderbox;
+
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.5;
+    padding-top: 10px;
+
+    &:first-child {
+      padding-top: 0px;
+    }
+
+  }
+
+}

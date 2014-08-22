@@ -1,5 +1,8 @@
 <?php get_header(); ?>
 
-content
+  <div class="wrapper post-content">
+    <h1>Hello!</h1>
+    <p>This is index.php</p>
+  </div>
 
 <?php get_footer(); ?>
