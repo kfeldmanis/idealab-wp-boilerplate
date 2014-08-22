@@ -72,6 +72,8 @@
   <link rel="apple-touch-icon" sizes="144x144" href="<?php echo $website_template_url; ?>/assets/images/misc/apple-touch-icon-144x144.png">
   <link rel="apple-touch-icon" sizes="152x152" href="<?php echo $website_template_url; ?>/assets/images/misc/apple-touch-icon-152x152.png">
 
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="<?php echo $website_template_url; ?>/assets/css/theme.css" />
 
   <!-- JS Libs -->
   <script type="text/javascript" src="<?php echo $website_template_url; ?>/assets/js/jquery-2.1.1.min.js"></script>

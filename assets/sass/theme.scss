@@ -39,6 +39,8 @@ body {
 
 #main-navigation {
   padding-top: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #ccc;
 
   ul {
     overflow: hidden;
@@ -46,7 +48,10 @@ body {
     li {
       float: left;
       margin-left: 20px;
-      padding: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
 
       &.current-menu-item {
         background-color: $dark;
@@ -63,7 +68,7 @@ body {
         padding-left: 0px;
 
         &.current-menu-item {
-          padding-left: 10px;
+          padding-left: 20px;
         }
 
       }
@@ -94,6 +99,12 @@ body {
     vertical-align: middle;
   }
 
+}
+
+#oldbrowser {
+  position: relative;
+  height: 100%;
+  text-align: center;
 }
 
 // Templates
