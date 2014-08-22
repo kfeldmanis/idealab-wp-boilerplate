@@ -182,7 +182,7 @@ function optionsframework_options() {
 	// return $options;
 
 	/* FIELD OPTIONS */
-	/*
+	
 	// Test data
 	$test_array = array(
 		'one' => __('One', 'options_check'),
@@ -252,9 +252,9 @@ function optionsframework_options() {
 		$options_pages[$page->ID] = $page->post_title;
 	}
 
-	*/
+	
 
-	$options = array();
+	// $options = array();
 
 	$options[] = array(
 		'name' => __('Basic Settings', 'options_check'),
