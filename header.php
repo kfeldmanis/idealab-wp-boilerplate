@@ -10,7 +10,6 @@
   $website_template_url       =     get_bloginfo('template_url');
   
   $website_author             =     get_option('website_author');
-  $website_google_id          =     get_option('google_id');
   $website_google_webmaster   =     get_option('google_webmaster');
   $website_twitter_username   =     get_option('twitter_username');
 
@@ -89,3 +88,7 @@
 </head>
 
 <body <?php body_class(); ?> >
+
+  <div class="wrapper" id="main-navigation">
+    <?php wp_nav_menu( array( 'theme_location' => 'header' ) ); ?>
+  </div>

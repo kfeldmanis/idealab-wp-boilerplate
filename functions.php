@@ -1,6 +1,9 @@
 <?php
 
-  register_nav_menus();
+  register_nav_menus( array(
+    'header' => 'Header nav',
+    'footer' => 'Footer nav'
+  ));
 
   function idea_scripts() {
     wp_enqueue_style( 'theme', get_template_directory_uri() . '/assets/css/theme.css', '1.0.0', true );

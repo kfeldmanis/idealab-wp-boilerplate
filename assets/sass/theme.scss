@@ -37,6 +37,48 @@ body {
 
 }
 
+#main-navigation {
+  padding-top: 40px;
+
+  ul {
+    overflow: hidden;
+
+    li {
+      float: left;
+      margin-left: 20px;
+      padding: 10px;
+
+      &.current-menu-item {
+        background-color: $dark;
+        @include border-radius(4px);
+
+        a {
+          color: white;
+        }
+
+      }
+
+      &:first-child {
+        margin-left: 0px;
+        padding-left: 0px;
+
+        &.current-menu-item {
+          padding-left: 10px;
+        }
+
+      }
+
+      a {
+        color: $dark;
+        text-decoration: none;
+      }
+
+    }
+
+  }
+
+}
+
 .table {
   display: table;
   width: 100%;
