@@ -23,9 +23,9 @@
   }
 
   // General options
-  $new_general_setting = new new_general_setting("website_author");
-  $new_general_setting = new new_general_setting("twitter_username");
-  $new_general_setting = new new_general_setting("google_id");
-  $new_general_setting = new new_general_setting("google_webmaster");
+  new new_general_setting("website_author");
+  new new_general_setting("twitter_username");
+  new new_general_setting("google_id");
+  new new_general_setting("google_webmaster");
 
 ?>
