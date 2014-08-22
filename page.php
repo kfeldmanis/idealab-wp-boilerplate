@@ -1,3 +1,3 @@
-<?php include("includes/header.php"); ?>
+<?php get_header(); ?>
 <?php include("templates/page.php"); ?>
-<?php include("includes/footer.php"); ?>
+<?php get_footer(); ?>

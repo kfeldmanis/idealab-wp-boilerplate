@@ -1,5 +1,5 @@
-<?php include("includes/header.php"); ?>
+<?php get_header(); ?>
 
 content
 
-<?php include("includes/footer.php"); ?>
+<?php get_footer(); ?>

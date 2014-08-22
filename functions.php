@@ -2,6 +2,13 @@
 
   register_nav_menus();
 
+  function idea_scripts() {
+    wp_enqueue_style( 'theme', get_template_directory_uri() . '/assets/css/theme.css', '1.0.0', true );
+    wp_enqueue_script( "scripts", get_template_directory_uri() . '/assets/js/scripts.js', array(), '1.0.0', true );
+  }
+
+  add_action( 'wp_enqueue_scripts', 'idea_scripts' );
+
   class new_general_setting {
 
     private $nap1 = "";

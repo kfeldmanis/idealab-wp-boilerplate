@@ -6,4 +6,6 @@ function init () {
 
   // Scripts
 
+  console.log("scripts loaded");
+
 }
