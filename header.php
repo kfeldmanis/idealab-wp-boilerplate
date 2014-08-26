@@ -9,9 +9,9 @@
   $website_charset            =     get_bloginfo('charset');
   $website_template_url       =     get_bloginfo('template_url');
   
-  $website_author             =     get_option('website_author');
-  $website_google_webmaster   =     get_option('google_webmaster');
-  $website_twitter_username   =     get_option('twitter_username');
+  $website_author             =     of_get_option('meta_author', 'idealab');
+  $website_google_webmaster   =     of_get_option('meta_google_webmaster', 'idealab');
+  $website_twitter_username   =     of_get_option('social_twitter_username', 'idealab');
 
 ?>
 
