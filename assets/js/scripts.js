@@ -4,20 +4,30 @@ $(document).ready(function () {
 
 function init () {
 
-  function DynamicPostsLoad(container) {
+  function DynamicPostsLoad(container, loadcount) {
 
     this.container = container;
-    default_offset = 0;
+    this.loadcount = loadcount;
 
     var cat = $(container).attr('data-category');
     var ajax_url = $(container).attr('data-ajaxurl');
-    var count = $(container).attr('data-count');
+    var total = $(container).attr('data-total');
 
     // Load posts
-    function loadPosts () {
+    function loadPosts (me) {
+      this.me = me;
+      var buttonText = me.html();
+      var count = $(container + " .post-item").length;
+      var post_offset = count;
 
-      this.container = container;
-      default_offset = parseInt(default_offset) + count;
+      var odd = total - count;
+
+      if ( odd == 1 ) {
+        var count_ = 1;
+      }
+      else {
+        var count_ = loadcount;
+      }
 
       $.ajax({
         url: ajax_url,
@@ -25,37 +35,33 @@ function init () {
         data:{
           action: 'load_posts',
           category: cat,
-          count: count,
-          post_offset: default_offset,
+          count: count_,
+          post_offset: post_offset
         },
         success: function(data) {
           if (data) {
             $(container).append(data);
-            $("a.load-more-posts.loading").html("Load more posts");
-            $("a.load-more-posts.loading").removeClass("loading");
+            me.html(buttonText);
           }
           else {
-            $("a.load-more-posts").html("All posts loaded");
-            $("a.load-more-posts").addClass("all-posts-loaded");
-            $("a.load-more-posts.loading").removeClass("loading");
+            me.html("All posts loaded");
           }
         },
         beforeSend: function() {
-          $("a.load-more-posts").html("Loading");
-          $("a.load-more-posts").addClass("loading");
+          me.html("Loading");
         }
       });
 
     }
 
     $("a.load-more-posts").on("click touchstart", function() {
-      loadPosts();
+      loadPosts( $(this) );
       return false;
     });
 
   }
 
   // Init functions
-  DynamicPostsLoad(".posts-container");
+  DynamicPostsLoad(".posts-container", 2);
 
 }

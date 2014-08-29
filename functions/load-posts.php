@@ -1,33 +1,30 @@
 <?php
-function load_posts(){
-
-     $post_contents = "";
+  function load_posts(){
     
-     $cat = $_POST['category'];
-     $post_offset = $_POST['post_offset'];
-     $count = $_POST['count'];
-         
-     $args = array('cat' => $cat, 'offset' => $post_offset, 'posts_per_page' => $count);
+        $post_contents = "";
 
-     $category_posts = new WP_Query($args);
+        $cat = $_POST['category'];
+        $post_offset = $_POST['post_offset'];
+        $count = $_POST['count'];
 
-      if($category_posts->have_posts()) : 
-        while($category_posts->have_posts()) : 
-          $category_posts->the_post(); ?>
-             
-          <div class="post-item">
+        $args = array('cat' => $cat, 'offset' => $post_offset, 'posts_per_page' => $count);
+
+        $category_posts = new WP_Query($args);
+
+        if($category_posts->have_posts()) : 
+          while($category_posts->have_posts()) : 
+            $category_posts->the_post(); ?>
+
+            <div class="post-item">
             <?php the_title(); ?>
-<!--             <?php the_excerpt(); ?>
-            <a href="<?php the_permalink(); ?>">Read more</a> -->
-          </div>
+            </div>
 
-        <?php endwhile;
-      endif;         
-           
-     die($post_contents);
-     
-  } 
+          <?php endwhile;
+        endif;         
 
-  add_action( 'wp_ajax_nopriv_load_posts', 'load_posts' );
-  add_action( 'wp_ajax_load_posts', 'load_posts' );
+       die($post_contents);
+    } 
+
+    add_action( 'wp_ajax_nopriv_load_posts', 'load_posts' );
+    add_action( 'wp_ajax_load_posts', 'load_posts' );
   ?>
