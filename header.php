@@ -87,6 +87,14 @@
 
   <?php wp_head(); ?>
 
+  <!-- Stupid fixed adminbar fix -->
+  <style type="text/css" media="screen">
+    html {
+      margin-top: 0px !important;
+      padding-top: 32px !important;
+    }
+  </style>
+
 </head>
 
 <body <?php body_class(); ?> >

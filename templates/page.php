@@ -8,3 +8,7 @@
 
   <?php endwhile;  ?>
 <?php endif; ?>
+
+<script type="text/javascript">
+  post_offset = increment = <?php echo get_option( 'posts_per_page' );?>;
+</script>

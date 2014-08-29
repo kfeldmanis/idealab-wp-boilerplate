@@ -1,5 +1,6 @@
 // Colors
 $dark : #333333;
+$red : #f24b57;
 
 // Fonts
 $primary-font: "Arial", sans-serif;
@@ -12,12 +13,18 @@ $primary-font: "Arial", sans-serif;
 html, body {
   width: 100%;
   height: 100%;
+  @include borderbox;
 }
 
 body {
   @include fontsmooth;
   font-family: $primary-font;
   color: $dark;
+}
+
+a {
+  color: $red;
+  text-decoration: none;
 }
 
 .wrapper {
@@ -97,6 +104,28 @@ body {
 
   &.middle {
     vertical-align: middle;
+  }
+
+}
+
+
+#footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 40px;
+  border-top: 1px solid #ccc;
+  overflow: hidden;
+
+  p, a {
+    font-size: 14px;
+  }
+
+  .copyright {
+    float: left;
+  }
+
+  .social {
+    float: right;
   }
 
 }

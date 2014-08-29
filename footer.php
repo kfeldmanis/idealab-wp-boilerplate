@@ -1,3 +1,15 @@
+<div id="footer" class="wrapper">
+
+  <div class="copyright">
+    <p>© <?php echo of_get_option('meta_author', 'idealab'); ?> 2014. IDEALAB Boilerplate Theme</p>
+  </div>
+
+  <div class="social">
+    <a href="http://twitter.com/<?php echo of_get_option('social_twitter_username', 'idealab'); ?>" target="_blank">Follow us</a>
+  </div>
+
+</div>
+
 <?php wp_footer(); ?>
 
 <script>
